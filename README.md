@@ -26,8 +26,7 @@ Or, if you're using yarn
 
 ```yarn install```
 
-
-and then
+### Running the app
 
 ```npm run dev```
 
