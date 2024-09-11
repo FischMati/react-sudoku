@@ -38,7 +38,7 @@ const isValidBoard = (board: number[][]) => {
 }
 
 
-const useSudokuValidation = (board: Number[][]) => {
+const useSudokuValidation = (board: number[][]) => {
   const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {

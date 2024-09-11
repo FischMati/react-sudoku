@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
 import useSudokuValidation from './hooks/useSudokuValidation';
-import Cell from './components/cell';
 import Row from './components/row';
 
 const initialBoard: number[][] = Array.from({ length: 9 }, () => new Array(9).fill(0));
@@ -26,7 +25,7 @@ function App() {
     setBoard(prevBoard =>
       prevBoard.map((rows, r) =>
         rows.map((cell, c) =>
-          r == i && c == j ? value ? Number(value) : 0 : cell)
+          r === i && c === j ? value ? Number(value) : 0 : cell)
       )
     )
   }, [setBoard])
