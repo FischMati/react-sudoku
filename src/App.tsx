@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import useSudokuValidation from './hooks/useSudokuValidation';
 import Cell from './components/cell';
+import Row from './components/row';
 
 const initialBoard: number[][] = Array.from({ length: 9 }, () => new Array(9).fill(0));
-
-
 
 function App() {
   const [board, setBoard] = useState(initialBoard)
@@ -38,11 +37,7 @@ function App() {
       <table>
         <tbody>
           {board.map((row, i) => (
-            <tr key={`row-${i}`}>
-              {row.map((cell, j) => (
-                <Cell key={`row-${i}-col-${j}`} i={i} j={j} onCellChange={onCellChange} value={cell} />
-              ))}
-            </tr>
+            <Row key={`row-${i}`} cells={row} i={i} onCellChange={onCellChange} />
           ))}
         </tbody>
       </table>

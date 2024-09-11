@@ -1,9 +1,9 @@
 import React from "react";
 
 interface CellProps {
-  i: Number;
-  j: Number;
-  value: number
+  i: number;
+  j: number;
+  value: number;
   onCellChange(e: React.ChangeEvent<HTMLInputElement>): void;
 }
 
